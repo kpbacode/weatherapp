@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const debug = require('debug')('weathermap');
 
 const Koa = require('koa');
@@ -27,7 +28,7 @@ router.get('/api/weather', async ctx => {
 
   ctx.type = 'application/json; charset=utf-8';
   ctx.body = weatherData.weather ? weatherData.weather[0] : {};
-});
+},);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
